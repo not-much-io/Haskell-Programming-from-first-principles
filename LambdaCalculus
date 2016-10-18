@@ -1,0 +1,4 @@
+Intermission Equivalence Exercise
+1. λxy.xz == λmn.mz
+2. λxy.xxy == λa(λb.aab)
+3. λxyz.zx == λtos.st
