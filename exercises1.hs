@@ -13,4 +13,4 @@ letterIndex x =
   "Something" !! x
 
 main :: IO ()
-main = putStrLn "Hello World"
+main = print $ letterIndex 1
