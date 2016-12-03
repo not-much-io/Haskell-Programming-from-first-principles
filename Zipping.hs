@@ -15,5 +15,5 @@ zipWith' f (x:xs) (x':xs') =
 
 
 zip'' :: [a] -> [b] -> [(a, b)]
-zip'' xs xs' =
-  zipWith' (,) xs xs'
+zip'' xs =
+  zipWith' (,) xs
