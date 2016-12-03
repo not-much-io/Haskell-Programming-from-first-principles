@@ -27,7 +27,7 @@ wrapAround i
   | i < ordA = wrapAround $ i + outOfAlphRange
   | i > ordZ = wrapAround $ i - outOfAlphRange
   | otherwise = i
-  
+
 
 caesar :: String -> Int -> String
 caesar s key =
@@ -84,7 +84,7 @@ shift key i =
       Add start of alph back again
            To get back a valid character code
   --}
-  ordA + (mod ((i + key) - ordA) outOfAlphRange)
+  ordA + mod ((i + key) - ordA) outOfAlphRange
 
 
 caesar'' :: String -> Int -> Maybe String
@@ -92,7 +92,7 @@ caesar'' s key =
   if is_not_valid then
     Nothing
   else
-    Just (map (chr . (shift key) . ord) s)
+    Just (map (chr . shift key . ord) s)
   where
     is_alph x =
       x >= ordA && x <= ordZ
