@@ -44,4 +44,3 @@ myMinimumBy f xs =
       if f x y == LT then x else y
   in
     foldl getLt (head xs) xs
-  

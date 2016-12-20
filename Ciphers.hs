@@ -51,6 +51,8 @@ caesar' s key =
   where
     is_alph x =
       x >= ordA && x <= ordZ
+
+
     is_not_valid =
       any not [ is_alph x
               | c <- s,
@@ -106,9 +108,3 @@ caesar'' s key =
 deCaesar'' :: String -> Int -> Maybe String
 deCaesar'' s key =
   caesar'' s (- key)
-
-{-
-caesar "abcxyz" (26*9999999)
-caesar' "abcxyz" (26*9999999)
-caesar'' "abcxyz" (26*9999999)
--}
